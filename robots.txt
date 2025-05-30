@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xenkiu.github.io/veros-optica/sitemap.xml
