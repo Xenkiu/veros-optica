@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vero’s Óptica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con logo y navegación -->
+    <header>
+        <div class="container header-container">
+            <img src="img/logo.png" alt="Logo Vero’s Óptica" class="logo-img">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#especialista">Especialista</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section id="inicio" class="welcome-section">
+        <div class="container">
+            <img src="img/local3.jpg" alt="Interior clínica" class="hero-image">
+            <div class="welcome-text">
+                <h2>Bienvenidos a Vero’s Óptica</h2>
+                <p>Cuidado visual profesional con la Dra. Leticia Verona Ugando, especialista con más de 20 años de experiencia en oftalmología.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicios -->
+<section id="servicios" class="services-section">
+    <div class="container">
+        <h2>Servicios</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="img/pac5.jpg" alt="Lentes de contacto">
+                <h3>Consultas Oftalmológicas</h3>
+                <p>Evaluaciones visuales completas, fondo de ojo, graduación y test ocular.</p>
+            </div>
+            <div class="service-item">
+                <img src="img/lentes3.jpg" alt="Venta de marcos">
+                <h3>Venta de Marcos</h3>
+                <p>Gran variedad de estilos y marcas para todos los gustos.</p>
+            </div>
+            <div class="service-item">
+                <img src="img/rayban4.jpg" alt="Lentes Ray-Ban">
+                <h3>Lentes de Sol</h3>
+                <p>Protección UV con diseño de vanguardia de las mejores marcas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+ </section>
+
+    <!-- Sección de la especialista -->
+    <section id="especialista" class="specialist-section">
+        <div class="container specialist-container">
+            <img src="img/doctora.jpg" alt="Dra. Leticia Verona" class="specialist-photo">
+            <div class="specialist-info">
+                <h2>Dra. Leticia Verona Ugando</h2>
+                <p>Especialista en Oftalmología y Medicina Familiar, Máster en Longevidad Satisfactoria, con más de 20 años de experiencia. Comprometida con la salud visual y el bienestar de sus pacientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+              <input type="text" name="name" placeholder="Tu nombre" required>
+             <input type="email" name="email" placeholder="Tu correo electrónico" required>
+             <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
+             <button type="submit">Enviar</button>
+           </form>
+
+           <p id="form-status"></p>
+        </div>
+    <!-- Catálogo interactivo -->
+<section class="catalog-section">
+    <div class="container">
+        <h2>Catálogo</h2>
+        <div class="catalog-buttons">
+            <button onclick="mostrarCatalogo('servicios')"><img src="img/icono_servicio.png" alt="Ícono servicio"> Servicios</button>
+            <button onclick="mostrarCatalogo('marcos')"><img src="img/icono_marcos.png" alt="Ícono marcos"> Marcos</button>
+            <button onclick="mostrarCatalogo('rayban')"><img src="img/icono_rayban.png" alt="Ícono Ray-Ban"> Gafas Ray-Ban</button>
+        </div>
+        <div id="catalogo-contenido" class="catalogo-contenido">
+            <p>Selecciona una categoría para ver el catálogo.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer con información -->
+    <footer>
+        <div class="container footer-container">
+            <p>Tel: +595 984 338271 | Email: fabifernaaragon@gmail.com</p>
+            <p>Horarios: Lun–Vie 9:00–12:00 / 13:30–17:30, Sáb 9:00–15:00</p>
+            <div class="socials">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("ErdQ2S2LMy8iOX0ie");
+  })();
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_qx94kxm', 'template_k8ivm0m', this)
+      .then(function() {
+          document.getElementById('form-status').innerText = '✅ Mensaje enviado con éxito.';
+      }, function(error) {
+          document.getElementById('form-status').innerText = '❌ Error al enviar. Intenta más tarde.';
+          console.error('EmailJS error:', error);
+      });
+
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
