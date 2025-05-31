@@ -808,3 +808,23 @@ button:hover {
 .contact-form button:hover {
   background-color: #a9803b;
 }
+ img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hero-images {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
