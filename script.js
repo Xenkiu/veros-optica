@@ -75,3 +75,18 @@ function mostrarCatalogo(categoria) {
 document.getElementById('menu-toggle').addEventListener('click', function() {
   document.getElementById('nav').classList.toggle('active');
 });
+
+function enviarWhatsApp() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
+
+  if (!nombre || !mensaje) {
+    alert("Por favor completa todos los campos.");
+    return;
+  }
+
+  const texto = `Hola, soy ${nombre} y quiero consultar lo siguiente:\n${mensaje}`;
+  const url = `https://wa.me/595984338271?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+}
