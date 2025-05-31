@@ -828,3 +828,22 @@ button:hover {
 body {
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-images {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-images img {
+    height: auto;
+  }
+
+  .hero-text {
+    text-align: left;
+    padding: 20px 10px;
+  }
+}
