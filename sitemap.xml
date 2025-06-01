@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
-    <loc>https://xenkiu.github.io/veros-optica/</loc>
-    <priority>1.00</priority>
+    <loc>https://xenkiu.github.io/vero-optica/</loc>
+    <lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://xenkiu.github.io/veros-optica/#servicios</loc>
-    <priority>0.80</priority>
+    <loc>https://xenkiu.github.io/vero-optica/#servicios</loc>
+    <lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://xenkiu.github.io/veros-optica/#especialista</loc>
-    <priority>0.70</priority>
+    <loc>https://xenkiu.github.io/vero-optica/#especialista</loc>
+    <lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://xenkiu.github.io/veros-optica/#contacto</loc>
-    <priority>0.60</priority>
+    <loc>https://xenkiu.github.io/vero-optica/#contacto</loc>
+    <lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
